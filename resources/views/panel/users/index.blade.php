@@ -89,7 +89,7 @@
                             {{$user->email}}
                         </td>
                         <td>
-                            <img alt="Avatar" class="table-avatar" src="{{'http://localhost:8000/storage/user/'.$user->image}}" style="width: 80px">
+                            <img alt="Avatar" class="table-avatar" src="{{'http://localhost:8000/storage/profile/'.$user->image}}" style="width: 80px">
                         </td>
                         <td class="project-state">
 
