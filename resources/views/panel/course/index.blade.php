@@ -48,15 +48,14 @@
                             @if($course->image == null)
                             <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}" style="width: 80px">
                             @else
-                                <img alt="Avatar" class="table-avatar" src="{{'http://localhost:8000/storage/images/'.$course->title.'/'. $course->image[0]}}" style="width: 80px">
-{{--                                <img alt="Avatar" class="table-avatar" src="{{'storage/app/public/images/'.$course->title.'/'.$course->image[0]}}" style="width: 80px">--}}
+                                <img alt="Avatar" class="table-avatar" src="{{$course->image}}" style="width: 80px">
                             @endif
                         </td>
 
                         <td>{{$course->isCompleted}}</td>
                         <td>$ {{$course->price}}</td>
                         <td>{{$course->user->name}}</td>
-                        <td>{{$course->updated_at->diffForHumans()}}</td>
+                        <td>{{$course->updated_at}}</td>
                         <td>
                             @foreach($course->categories as $category)
                                 [{{$category->name}}]

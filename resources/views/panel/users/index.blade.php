@@ -102,11 +102,6 @@
 
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-primary btn-sm" href="{{route('showUser' , $user->id)}}">
-                                <i class="fas fa-folder">
-                                </i>
-                                View
-                            </a>
                             <a class="btn btn-info btn-sm" href="{{route('showUser' , $user->id)}}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
@@ -114,7 +109,7 @@
                             </a>
 
 
-                            <form action="{{route('deleteUser' , $user->id)}}" method="post">
+                            <form action="{{route('users.delete' , $user->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-sm">Delete</button>

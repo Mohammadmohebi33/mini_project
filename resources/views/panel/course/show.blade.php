@@ -22,7 +22,7 @@
                             <h3 class="d-inline-block d-sm-none">{{$course->title}}</h3>
                             <div class="col-12">
                                 @if($course->image != null)
-                                <img src="/images/{{$course->image}}" class="product-image" alt="Product Image">
+                                <img src="{{$course->image}}" class="product-image" alt="Product Image">
                                 @else
                                     <img src="../../dist/img/prod-1.jpg" class="product-image" alt="Product Image">
                                 @endif
@@ -173,7 +173,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($sessions as $session)
+                                            @foreach($episodes as $session)
                                                 <tr>
                                                     <td>{{$session->id}}</td>
                                                     <td>{{$session->title}}</td>
@@ -243,55 +243,55 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                            @foreach($course->purchase as $purchases)
+{{--                                            @foreach($course->purchase as $purchases)--}}
 
-                                                    <td>
-                                                        {{$purchases->user->id}}
-                                                    </td>
-                                                    <td>
-                                                        <a>
-                                                            {{$purchases->user->name}}
-                                                        </a>
-                                                        <br>
-                                                        <small>
-                                                            join {{$purchases->user->created_at->diffForHumans()}}
-                                                        </small>
-                                                    </td>
-                                                    <td>
-                                                        {{$purchases->user->email}}
-                                                    </td>
-                                                    <td>
-                                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}" style="width: 80px">
-                                                    </td>
-                                                    <td class="project-state">
+{{--                                                    <td>--}}
+{{--                                                        {{$purchases->user->id}}--}}
+{{--                                                    </td>--}}
+{{--                                                    <td>--}}
+{{--                                                        <a>--}}
+{{--                                                            {{$purchases->user->name}}--}}
+{{--                                                        </a>--}}
+{{--                                                        <br>--}}
+{{--                                                        <small>--}}
+{{--                                                            join {{$purchases->user->created_at->diffForHumans()}}--}}
+{{--                                                        </small>--}}
+{{--                                                    </td>--}}
+{{--                                                    <td>--}}
+{{--                                                        {{$purchases->user->email}}--}}
+{{--                                                    </td>--}}
+{{--                                                    <td>--}}
+{{--                                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}" style="width: 80px">--}}
+{{--                                                    </td>--}}
+{{--                                                    <td class="project-state">--}}
 
-                                                        @if($purchases->user->status == 'able')
-                                                            <span class="badge badge-success">able</span>
-                                                        @else
-                                                            <span class="badge badge-danger">disable</span>
-                                                        @endif
-                                                    </td>
-                                                    <td class="project-actions text-right">
-                                                        <a class="btn btn-primary btn-sm" href="{{route('showUser' , $purchases->user->id)}}">
-                                                            <i class="fas fa-folder">
-                                                            </i>
-                                                            View
-                                                        </a>
-                                                        <a class="btn btn-info btn-sm" href="{{route('showUser' , $purchases->user->id)}}">
-                                                            <i class="fas fa-pencil-alt">
-                                                            </i>
-                                                            Edit
-                                                        </a>
+{{--                                                        @if($purchases->user->status == 'able')--}}
+{{--                                                            <span class="badge badge-success">able</span>--}}
+{{--                                                        @else--}}
+{{--                                                            <span class="badge badge-danger">disable</span>--}}
+{{--                                                        @endif--}}
+{{--                                                    </td>--}}
+{{--                                                    <td class="project-actions text-right">--}}
+{{--                                                        <a class="btn btn-primary btn-sm" href="{{route('showUser' , $purchases->user->id)}}">--}}
+{{--                                                            <i class="fas fa-folder">--}}
+{{--                                                            </i>--}}
+{{--                                                            View--}}
+{{--                                                        </a>--}}
+{{--                                                        <a class="btn btn-info btn-sm" href="{{route('showUser' , $purchases->user->id)}}">--}}
+{{--                                                            <i class="fas fa-pencil-alt">--}}
+{{--                                                            </i>--}}
+{{--                                                            Edit--}}
+{{--                                                        </a>--}}
 
 
-                                                        <form action="{{route('deleteUser' , $purchases->user->id)}}" method="post">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button class="btn btn-danger btn-sm">Delete</button>
-                                                        </form>
+{{--                                                        <form action="{{route('deleteUser' , $purchases->user->id)}}" method="post">--}}
+{{--                                                            @csrf--}}
+{{--                                                            @method('DELETE')--}}
+{{--                                                            <button class="btn btn-danger btn-sm">Delete</button>--}}
+{{--                                                        </form>--}}
 
-                                                    </td>
-                                                    @endforeach
+{{--                                                    </td>--}}
+{{--                                                    @endforeach--}}
                                                 </tr>
                                             </tbody>
                                         </table>

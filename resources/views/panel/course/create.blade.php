@@ -1,6 +1,4 @@
 @extends('panel.master.index')
-
-
 @section('content')
 
     <section class="content">
@@ -30,7 +28,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">title</label>
-                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
+                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter title" value="{!! request()->old('title') !!}">
                                 </div>
                             </div>
 
@@ -58,7 +56,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">price</label>
-                                    <input type="number" name="price" class="form-control" id="exampleInputEmail1" placeholder="Enter price">
+                                    <input type="number" name="price" class="form-control" id="exampleInputEmail1" placeholder="Enter price" value="{!! request()->old('price') !!}">
                                 </div>
                             </div>
 
@@ -73,7 +71,7 @@
                             </div>
 
                             <div class="card-body">
-                                <textarea class="form-control" name="description" id="summernote"></textarea>
+                                <textarea class="form-control" name="description" id="summernote">{!! request()->old('description') !!}}</textarea>
                             </div>
 
 
@@ -81,7 +79,7 @@
                                 <label for="exampleInputFile">Image course</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input name="image" type="file" class="custom-file-input" id="exampleInputFile">
+                                        <input name="image" type="file" class="custom-file-input" id="exampleInputFile" value="{!! request()->old('image') !!}">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
                                     <div class="input-group-append">
@@ -94,7 +92,7 @@
                                 <label for="exampleInputFile">introduction video</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input name="video" type="file" class="custom-file-input" id="exampleInputFile">
+                                        <input name="video" type="file" class="custom-file-input" id="exampleInputFile" value="{!! request()->old('video') !!}">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
                                     <div class="input-group-append">

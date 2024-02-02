@@ -26,7 +26,7 @@
 
                         <form id="quickForm" novalidate="novalidate" method="post" action="{{route('course.update',  $course->id)}}" enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
+                            @method('PATCH')
 
                             <div class="card-body">
                                 <div class="form-group">
@@ -111,7 +111,7 @@
                                 @if($course->image == null)
                                     <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}" style="width: 180px">
                                 @else
-                                    <img alt="Avatar" class="table-avatar" src="{{asset('images/'.$course->image)}}" style="width: 180px">
+                                    <img alt="Avatar" class="table-avatar" src="{{$course->image}}" style="width: 180px">
                                 @endif
                             </div>
 

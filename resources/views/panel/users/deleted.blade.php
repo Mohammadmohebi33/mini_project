@@ -102,19 +102,10 @@
 
 
                     <td class="project-actions text-right">
-
-
-                        <form action="{{route('deleteUser' , $user->id)}}" method="post">
+                        <form method="post" action="{{route('users.restore' , $user->id)}}">
                             @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <button type="submit" class="btn btn-primary btn-sm">restore</button>
                         </form>
-
-                        <form method="post" action="{{route('users.restore' , $user->id)}}" >
-                            @csrf
-                            <button class="btn btn-primary btn-sm">restore</button>
-                        </form>
-
                     </td>
                     @endforeach
                 </tr>

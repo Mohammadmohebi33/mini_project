@@ -7,11 +7,12 @@ use App\Http\Requests\UserRequest;
 use App\Models\Role;
 use App\Models\User;
 use App\Traits\Upload;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     use Upload;
+
+
     public function index()
     {
         $users = collect([]);
@@ -40,7 +41,6 @@ class UserController extends Controller
     {
         $userData = $request->validated();
 
-
         if(!isset($userData['image'])){
             $user->update([
                 'name' => $userData['name'],
@@ -49,8 +49,7 @@ class UserController extends Controller
             ]);
         }else{
            $userData['image'] = $this->uploadOneImage($userData['image'] , 'profile');
-
-            $user->update([
+           $user->update([
                 'name' => $userData['name'],
                 'about_me' => $userData['about_me'],
                 'status' => $userData['status'],
@@ -67,5 +66,26 @@ class UserController extends Controller
         return to_route('users');
     }
 
+
+    public function trashed()
+    {
+        $users = User::onlyTrashed()->get();
+        return view('panel.users.deleted' , compact('users'));
+    }
+
+
+    public function restore($id)
+    {
+       User::query()->where('id', $id)->withTrashed()->restore();
+       return to_route('users');
+    }
+
+
+    public function destroy(User $user)
+    {
+
+        $user->delete();
+        return to_route('users');
+    }
 }
 
