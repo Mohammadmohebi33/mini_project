@@ -4,6 +4,7 @@
 /public/home
 /public/panel_asset
 /public/hot
+/public/sessions
 /public/storage
 /storage/*.key
 /vendor
