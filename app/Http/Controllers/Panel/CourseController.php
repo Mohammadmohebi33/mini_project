@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
-
     use Upload;
 
 
@@ -23,7 +22,6 @@ class CourseController extends Controller
         }else{
             $courses = auth::user()->courses;
         }
-
         return view('panel.course.index' , compact('courses'));
     }
 
@@ -83,7 +81,8 @@ class CourseController extends Controller
 
     public function destroy(Course $course)
     {
-        dd($course);
+        $course->delete();
+        return back();
     }
 
 }

@@ -58,7 +58,6 @@
                                     <button class="btn btn-danger btn-sm">Delete</button>
                                 </form>
                             </td>
-                            <td><input id="{{$category->id}}" onchange="changeStatus({{ $category->id }})" data-url="{{ route('category.status', $category->id) }}" type="checkbox" @if($category->status) checked @endif></td>
                             @endforeach
                         </tr>
                     </tbody>

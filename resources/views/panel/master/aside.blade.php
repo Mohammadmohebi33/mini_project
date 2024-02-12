@@ -13,27 +13,9 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/charts/chartjs.html" class="nav-link">
+                                <a href="{{route('panel')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>ChartJS</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/charts/flot.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Flot</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/charts/inline.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inline</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/charts/uplot.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>uPlot</p>
                                 </a>
                             </li>
                         </ul>
@@ -90,13 +72,6 @@
                                     <p>Create</p>
                                 </a>
                             </li>
-
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>deleted</p>
-                                </a>
-                            </li>
                         </ul>
 
                     </li>
@@ -118,6 +93,8 @@
                         </ul>
 
                     </li>
+
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-soap"></i>
@@ -128,14 +105,14 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{route('episodes.index')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>all Episodes</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{route('episodes.create')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>create Episode</p>
                                 </a>
@@ -143,6 +120,8 @@
                         </ul>
 
                     </li>
+
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-person-booth"></i>
@@ -151,31 +130,11 @@
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
-{{--                        <ul class="nav nav-treeview">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('myProfile')}}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>edit profile</p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('episodes.create')}}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>خرید های من</p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('episodes.create')}}" class="nav-link">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>دوره های من</p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
 
                     </li>
+
+
+{{--                    comments--}}
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-comment"></i>
@@ -186,7 +145,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{route('comment.index')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>All Comments</p>
                                 </a>
@@ -195,7 +154,7 @@
 
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{route('activeComment.store')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>active Comment</p>
                                 </a>
@@ -205,13 +164,12 @@
 
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{route('rejectComment.store')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>reject Comment</p>
                                 </a>
                             </li>
                         </ul>
-
                     </li>
                 </ul>
             </nav>

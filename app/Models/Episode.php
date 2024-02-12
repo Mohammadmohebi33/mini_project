@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Episode extends Model
 {
+
+    protected $guarded =[];
     use HasFactory;
+
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

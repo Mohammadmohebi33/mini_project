@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Comment;
 use App\Models\Role;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        Comment::factory(20)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -21,8 +24,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // create roles :
-        foreach (Role::$roleName as $role){
-            Role::query()->create(['role_name' => $role]);
-        }
+//        foreach (Role::$roleName as $role){
+//            Role::query()->create(['role_name' => $role]);
+//        }
     }
 }
